@@ -32,27 +32,23 @@ if (WczytanyZnak != Znak)
      LZespolona Wynik;
 switch (WyraZ.Op)
 {
-case 'Op_Dodaj':
+case 0:
     Wynik=WyraZ.Arg1 + WyraZ.Arg2;
     break;
-case 'Op_Odejmij':
+case 1:
     Wynik=WyraZ.Arg1 - WyraZ.Arg2;
     break;
-    case 'Op_Mnoz':
+    case 2:
     Wynik=WyraZ.Arg1 * WyraZ.Arg2;
     break;
-    case 'Op_Dziel':
+    case 3:
     Wynik=WyraZ.Arg1 / WyraZ.Arg2;
     break;
 
 
 default:
     break;
+
+    }
     return Wynik;
-}
-
-
-
-
-
  }

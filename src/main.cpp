@@ -34,8 +34,31 @@ int main(int argc, char **argv)
   WyrazenieZesp   WyrZ_PytanieTestowe;
   
   while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) {
-    cout << " Czesc rzeczywista pierwszego argumentu: ";
-    cout << WyrZ_PytanieTestowe.Arg1.re << endl;
+    //cout << " Czesc rzeczywista pierwszego argumentu: ";
+    //cout << WyrZ_PytanieTestowe.Arg1.re << endl;
+    cout << WyrZ_PytanieTestowe.Arg1;
+    switch (WyrZ_PytanieTestowe.Op)
+    {
+    case 0:
+      cout <<"+";
+      break;
+      case 1:
+      cout <<"-";
+      break;
+    case 2:
+      cout <<"*";
+      break;
+    case 3:
+      cout <<"/";
+    break;
+
+
+    
+    default:
+      break;
+    }
+    cout << WyrZ_PytanieTestowe.Arg2<<endl;
+
   }
 
   

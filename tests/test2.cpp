@@ -1,8 +1,8 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "./doctest/doctest.h"
-#include "LZespolona.hh"
+#include "WyrazenieZesp.hh"
 
-TEST_CASE("Test LZespolona dzielenie przez skalar 1") {
+/*TEST_CASE("Test LZespolona dzielenie przez skalar 1") {
     LZespolona x, y;
     double t = 2;
     
@@ -37,4 +37,44 @@ TEST_CASE("Test LZespolona dzielenie przez skalar - zero") {
  
    WARN_THROWS(x/t);
 }
+*/
 
+TEST_CASE("operator wypisania"){
+LZespolona x;
+x.re = 2;
+x.im =2;
+
+std::ostringstream out ;
+out << x;
+std::cout << out.str() << std::endl;
+CHECK( "(2+2i)"== out.str() );
+
+
+
+}
+TEST_CASE("operator wczytywania"){
+LZespolona x;
+std::istringstream in("(5+5i)");
+in >> x;
+
+std::ostringstream out ;
+out << x;
+CHECK( "(5+5i)"== out.str() );
+
+
+
+}
+TEST_CASE("Oblicz+"){
+//LZespolona Arg1 , Arg2;
+WyrazenieZesp WyraZ;
+LZespolona wynik ,wynikpoprawny;
+WyraZ.Arg1.re=1;
+WyraZ.Arg1.im=1;
+WyraZ.Arg2.re=1;
+WyraZ.Arg2.im=1;
+WyraZ.Op=Op_Dodaj;
+wynikpoprawny.re=2;
+wynikpoprawny.im=2;
+wynik=Oblicz(WyraZ);
+CHECK(wynik==wynikpoprawny);
+}
