@@ -1,5 +1,5 @@
-#ifndef WYRAZENIEZESP_HH
-#define WYRAZENIEZESP_HH
+//#ifndef WYRAZENIEZESP_HH
+//#define WYRAZENIEZESP_HH
 
 
 
@@ -9,5 +9,13 @@
 /*
  * Tu nalezy zdefiniowac funkcje, ktore definiuja model statystyki 
  */
+struct Statystyki
+{
+   double liczbapytan;
+   double liczbadobrych;
+   
+  double Oblicz()const;
 
-#endif
+};
+
+//#endif

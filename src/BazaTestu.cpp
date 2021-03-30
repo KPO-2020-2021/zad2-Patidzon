@@ -12,8 +12,8 @@ using namespace std;
 static WyrazenieZesp  TestLatwy[] =
   { {{2,1}, Op_Dodaj, {1,2}},
     {{1,0}, Op_Odejmij, {0,1}},
-    {{3,0}, Op_Mnoz, {0,3}},
-    {{4,8}, Op_Dziel, {1,0}},
+    {{2,2}, Op_Mnoz, {2,3}},
+    {{4,8}, Op_Dziel, {0,0}},
   };
 
 /*
@@ -24,7 +24,7 @@ static WyrazenieZesp  TestTrudny[] =
   { {{2,1}, Op_Dodaj, {1,2}},
     {{1,0}, Op_Odejmij, {0,1}},
     {{3,0}, Op_Mnoz, {0,3}},
-    {{4,8}, Op_Dziel, {1,0}},
+    {{4,8}, Op_Dziel, {0,0}},
   };
 
 /*

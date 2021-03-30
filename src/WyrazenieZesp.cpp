@@ -8,7 +8,8 @@
  * w pliku naglowkowym.
  */
 std::ostream & operator << (std::ostream &StrmWyj, LZespolona LZesp){
-StrmWyj << "(" << LZesp.re << std::showpos <<LZesp.im<< std::noshowpos << "i)";
+  StrmWyj.precision(2);
+StrmWyj << "(" <<std::fixed << LZesp.re << std::showpos <<LZesp.im<< std::noshowpos << "i)";
 return StrmWyj;
 
  }
@@ -52,3 +53,29 @@ default:
     }
     return Wynik;
  }
+std::ostream & operator << (std::ostream &StrmWyj, WyrazenieZesp WyraZ){
+  //StrmWyj.precision(2);
+StrmWyj <<WyraZ.Arg1 ;
+switch (WyraZ.Op)
+    {
+    case 0:
+      StrmWyj <<"+";
+      break;
+      case 1:
+      StrmWyj <<"-";
+      break;
+    case 2:
+      StrmWyj <<"*";
+      break;
+    case 3:
+      StrmWyj<<"/";
+    break;
+
+
+    
+    default:
+      break;
+    }
+   StrmWyj<<WyraZ.Arg2;
+return StrmWyj;
+}

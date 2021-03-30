@@ -47,7 +47,7 @@ x.im =2;
 std::ostringstream out ;
 out << x;
 std::cout << out.str() << std::endl;
-CHECK( "(2+2i)"== out.str() );
+CHECK( "(2.00+2.00i)"== out.str() );
 
 
 
@@ -59,7 +59,7 @@ in >> x;
 
 std::ostringstream out ;
 out << x;
-CHECK( "(5+5i)"== out.str() );
+CHECK( "(5.00+5.00i)"== out.str() );
 
 
 
@@ -77,4 +77,19 @@ wynikpoprawny.re=2;
 wynikpoprawny.im=2;
 wynik=Oblicz(WyraZ);
 CHECK(wynik==wynikpoprawny);
+}
+TEST_CASE("test LZespolona Mnożenie"){
+    LZespolona x, y, z,a;
+
+    x.re = 2;
+    x.im = 2;
+
+    y.re = 2;
+    y.im = 3;
+
+    z.re = -2;
+    z.im = 10;
+    x*y=a;
+    std::cout<<a;
+    CHECK((y*x) == z);
 }
