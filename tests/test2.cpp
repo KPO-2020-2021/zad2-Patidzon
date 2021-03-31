@@ -79,7 +79,7 @@ wynik=Oblicz(WyraZ);
 CHECK(wynik==wynikpoprawny);
 }
 TEST_CASE("test LZespolona Mnożenie"){
-    LZespolona x, y, z,a;
+    LZespolona x, y, z;
 
     x.re = 2;
     x.im = 2;
@@ -89,7 +89,6 @@ TEST_CASE("test LZespolona Mnożenie"){
 
     z.re = -2;
     z.im = 10;
-    x*y=a;
-    std::cout<<a;
+ 
     CHECK((y*x) == z);
 }

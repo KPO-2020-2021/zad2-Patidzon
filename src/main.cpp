@@ -43,10 +43,12 @@ Statystyki wyniki;
     
     cout << WyrZ_PytanieTestowe<<endl;
     poprawnaodp=Oblicz(WyrZ_PytanieTestowe);
-cout<<poprawnaodp<<endl<<"podaj odpowiedz ";
+cout<<poprawnaodp<<endl;//na potrzeby testów można zakomentować
+cout<<"podaj odpowiedz ";
 cin>>odpowiedz;
+cout<<endl;
 while (!cin)
-{cout<< "zly format liczby"<<endl;
+{cout<< "zly format liczby poprawny format (a+bi)"<<endl;
 cin.clear();
   cin >> odpowiedz;
   

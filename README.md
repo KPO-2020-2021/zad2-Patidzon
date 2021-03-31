@@ -33,6 +33,8 @@ Repozytorium z zalążkiem do zadania ma następującą strukturę:
 
 ## Odnośniki do źródeł
 [Strona kursu z Programowania Obiektowego](https://kcir.pwr.edu.pl/~kreczmer/po/)
-
+Ważne informacje:
+Operator "*" nie został zdefiniowany jako metoda, ponieważ po takowej zamianie podawał błędny wynik. Nie udało mi się określić przyczyn owego błedu, więc wróciłem do wersji poprzedniej.
+Warunek zapobiegający dzieleniu przez zero znajduje się w funkcji main
 
 

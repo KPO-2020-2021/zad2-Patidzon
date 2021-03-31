@@ -72,11 +72,18 @@ LZespolona LZespolona::operator - (  LZespolona  Skl2)const
   Skl2.im = im - Skl2.im;
   return Skl2;
 }
-LZespolona  LZespolona::operator * ( LZespolona  Skl2)const
+/*LZespolona  LZespolona::operator * ( LZespolona  Skl2)const
 {
   //LZespolona  Wynik;
 
   Skl2.re = re*Skl2.re - Skl2.im*im;
   Skl2.im = re*Skl2.im + Skl2.re*im;
   return Skl2;
+}*/
+LZespolona  operator * ( LZespolona Skl1 , LZespolona  Skl2){
+  LZespolona  Wynik;
+
+  Wynik.re = Skl1.re*Skl2.re - Skl2.im*Skl1.im;
+  Wynik.im = Skl1.re*Skl2.im + Skl2.re*Skl1.im;
+  return Wynik;
 }
