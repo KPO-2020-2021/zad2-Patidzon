@@ -35,6 +35,7 @@ Repozytorium z zalążkiem do zadania ma następującą strukturę:
 [Strona kursu z Programowania Obiektowego](https://kcir.pwr.edu.pl/~kreczmer/po/)
 Ważne informacje:
 Operator "*" nie został zdefiniowany jako metoda, ponieważ po takowej zamianie podawał błędny wynik. Nie udało mi się określić przyczyn owego błedu, więc wróciłem do wersji poprzedniej.
-Warunek zapobiegający dzieleniu przez zero znajduje się w funkcji main
+Warunek zapobiegający dzieleniu przez zero dzieleniu przez liczbę zespoloną znajduje się w funkcji main
+Warunek zapobiegający dzieleniu przez zero dzieleniu przez skalar znajdowałby się przed wywołaniem takie operatora w funkcji main, ale że nie został w nim użyty zabezpieczenie nie było konieczne( łatwij mi napisać warunek sprawdzający liczby biorące udział w działaniu niż pisać wyjątek w operatorze )
 
 
