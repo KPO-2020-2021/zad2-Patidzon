@@ -87,3 +87,55 @@ LZespolona  operator * ( LZespolona Skl1 , LZespolona  Skl2){
   Wynik.im = Skl1.re*Skl2.im + Skl2.re*Skl1.im;
   return Wynik;
 }
+LZespolona LZespolona::operator += ( LZespolona const &Skl2){
+*this=*this+Skl2;
+return (*this);
+
+}
+double arg(LZespolona Skl1){
+double wynik;
+if(Skl1.re!=0){
+  if (Skl1.re>0)
+  {
+    wynik=atan2(Skl1.im,Skl1.re);
+  }
+  else
+  {
+    wynik=atan2(Skl1.im,Skl1.re)+M_PI;
+  }
+  
+}
+
+else
+{
+  if (Skl1.im>0)
+  {
+   wynik=M_PI/2;
+  }
+  else
+  {
+    wynik=-M_PI/2;
+  }
+  
+}
+return wynik;
+}
+LZespolona  LZespolona::operator / ( double skalar)
+{
+  LZespolona  Wynik;
+
+  Wynik.re = re/skalar;
+  Wynik.im = im/skalar ;
+  
+  return Wynik;
+}
+
+  LZespolona LZespolona::operator /= ( LZespolona const &Skl2){
+
+(*this)=(*this)/Skl2;
+
+return (*this);
+
+
+  }
+

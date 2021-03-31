@@ -1,8 +1,8 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "./doctest/doctest.h"
 #include "WyrazenieZesp.hh"
-
-/*TEST_CASE("Test LZespolona dzielenie przez skalar 1") {
+#define MIN_DIFF 0.00001
+TEST_CASE("Test LZespolona dzielenie przez skalar 1") {
     LZespolona x, y;
     double t = 2;
     
@@ -22,8 +22,8 @@ TEST_CASE("Test LZespolona dzielenie przez skalar 2") {
     x.re = 2;
     x.im = 2;
 
-    y.re = 1;
-    y.im = 1;
+    y.re = 0.66666667;
+    y.im = 0.66666667;
    
     CHECK(x/t == y);
 }
@@ -37,7 +37,7 @@ TEST_CASE("Test LZespolona dzielenie przez skalar - zero") {
  
    WARN_THROWS(x/t);
 }
-*/
+
 
 TEST_CASE("operator wypisania"){
 LZespolona x;
@@ -91,4 +91,42 @@ TEST_CASE("test LZespolona Mnożenie"){
     z.im = 10;
  
     CHECK((y*x) == z);
+}
+TEST_CASE("test LZespolona Suma przypisanie"){
+    LZespolona x, y, z;
+
+    x.re = 1;
+    x.im = 1;
+
+    y.re = 1;
+    y.im = -3;
+
+    z.re = 2;
+    z.im = -2;
+    x+=y;
+    CHECK(x == z);
+}
+TEST_CASE("argument glowny"){
+    LZespolona x;
+double wynik,odp;
+    x.re = 4;
+    x.im = 4;
+wynik=arg(x);
+   odp=0.785398163397;
+    
+    CHECK(std::abs(wynik-odp)<=MIN_DIFF);
+}
+ TEST_CASE("test LZespolona dziel przypisanie"){
+    LZespolona x, y, z;
+
+    x.re = 1;
+    x.im = 1;
+
+    y.re = 1;
+    y.im = -3;
+
+    z.re = -0.2;
+    z.im = 0.4;
+    x/=y;
+    CHECK(x == z);
 }

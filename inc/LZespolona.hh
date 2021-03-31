@@ -18,6 +18,9 @@ struct  LZespolona {
   LZespolona  operator - ( LZespolona  Skl2)const;
   //LZespolona  operator * (  LZespolona  Skl2)const;
   LZespolona  operator / ( LZespolona  Skl2)const;
+  LZespolona operator += ( LZespolona const &Skl2);
+  LZespolona operator /= ( LZespolona const &Skl2);
+  LZespolona operator / (double skalar);
   bool  operator == ( LZespolona  Skl2)const;
 };
 
@@ -30,7 +33,7 @@ struct  LZespolona {
 
 LZespolona  operator * ( LZespolona Skl1, LZespolona  Skl2);
 
-
+double arg(LZespolona Skl1);
 
 
 //LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
